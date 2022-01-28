@@ -26,6 +26,7 @@ namespace Snake_And_Ladder_Problem
                 switch (choice)
                 {
                     case LADDER:
+                        if(player_pos+diceoutcome<=100)
                         player_pos += diceoutcome;
                         break;
                     case SNAKE:
