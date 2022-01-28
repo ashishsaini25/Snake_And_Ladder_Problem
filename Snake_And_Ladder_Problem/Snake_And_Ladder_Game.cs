@@ -21,7 +21,7 @@ namespace Snake_And_Ladder_Problem
             const int LADDER = 1, SNAKE = 2;
             while (player_pos < 100)
             {
-                int choice = random.Next(0, 3);
+                int choice = random.Next(1, 3);
                 int diceoutcome = DiceRoll();
                 switch (choice)
                 {
