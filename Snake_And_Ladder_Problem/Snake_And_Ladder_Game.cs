@@ -16,19 +16,19 @@ namespace Snake_And_Ladder_Problem
             count++;
             return dice;
         }
-        public void Play()
+        public int Play()
         {
-
             const int LADDER = 1, SNAKE = 2;
-            while (player_pos < 100)
-            {
                 int choice = random.Next(1, 3);
                 int diceoutcome = DiceRoll();
                 switch (choice)
                 {
                     case LADDER:
-                        if(player_pos+diceoutcome<=100)
+                    if (player_pos + diceoutcome <= 100)
+                    {
                         player_pos += diceoutcome;
+                        Play();
+                    }
                         break;
                     case SNAKE:
                         if(player_pos-diceoutcome > 0)
@@ -41,10 +41,9 @@ namespace Snake_And_Ladder_Problem
                     default:
                         break;
                 }
-                Console.WriteLine("The Currenyt Player Postion is: {0}", player_pos);
+            return player_pos;
             }
-            Console.WriteLine("The Total no of times The Game Played {0}", count);
-        }
+
     }
 }
 
