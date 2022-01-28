@@ -30,7 +30,7 @@ namespace Snake_And_Ladder_Problem
                         player_pos += diceoutcome;
                         break;
                     case SNAKE:
-                        if(player_pos-diceoutcome>0)
+                        if(player_pos-diceoutcome > 0)
                         player_pos -= diceoutcome;
                         else
                         {
