@@ -18,7 +18,7 @@ namespace Snake_And_Ladder_Problem
         public void Play()
         {
             const int LADDER = 1, SNAKE = 2;
-            int choice = random.Next(0, 3);
+            int choice = random.Next(1, 3);
             int diceoutcome = DiceRoll();
             switch (choice)
             {
