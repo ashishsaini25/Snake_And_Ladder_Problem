@@ -9,6 +9,13 @@ namespace Snake_And_Ladder_Problem
     public class Snake_And_Ladder_Game
     {
         int player_pos = 0;
+        Random random = new Random();
+        public int DiceRoll()
+        {
+            int dice = random.Next(1, 7);
+            return dice;
+        }
+       
     }
 }
 
