@@ -17,21 +17,30 @@ namespace Snake_And_Ladder_Problem
         }
         public void Play()
         {
-            const int LADDER = 1, SNAKE = 2;
-            int choice = random.Next(0, 3);
-            int diceoutcome = DiceRoll();
-            switch (choice)
-            {
-                case LADDER:
-                    player_pos += diceoutcome;
-                    break;
-                case SNAKE:
-                    player_pos -= diceoutcome;
-                    break;
-                default:
-                    break;
-            }
 
+            const int LADDER = 1, SNAKE = 2;
+            while (player_pos < 100)
+            {
+                int choice = random.Next(0, 3);
+                int diceoutcome = DiceRoll();
+                switch (choice)
+                {
+                    case LADDER:
+                        player_pos += diceoutcome;
+                        break;
+                    case SNAKE:
+                        if(player_pos-diceoutcome>0)
+                        player_pos -= diceoutcome;
+                        else
+                        {
+                            player_pos = 0;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+            }
         }
     }
 }

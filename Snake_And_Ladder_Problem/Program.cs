@@ -11,6 +11,7 @@ namespace Snake_And_Ladder_Problem
         static void Main(string[] args)
         {
            Snake_And_Ladder_Game player1=new Snake_And_Ladder_Game();
+            player1.Play();
         }
     }
 }
