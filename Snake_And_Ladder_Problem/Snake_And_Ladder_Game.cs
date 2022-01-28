@@ -8,11 +8,12 @@ namespace Snake_And_Ladder_Problem
 {
     public class Snake_And_Ladder_Game
     {
-        int player_pos = 0;
+        int player_pos = 0,count=0;
         Random random = new Random();
         public int DiceRoll()
         {
             int dice = random.Next(1, 7);
+            count++;
             return dice;
         }
         public void Play()
@@ -40,8 +41,9 @@ namespace Snake_And_Ladder_Problem
                     default:
                         break;
                 }
-
+                Console.WriteLine("The Currenyt Player Postion is: {0}", player_pos);
             }
+            Console.WriteLine("The Total no of times The Game Played {0}", count);
         }
     }
 }
