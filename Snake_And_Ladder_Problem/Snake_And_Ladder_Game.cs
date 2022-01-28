@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake_And_Ladder_Problem
 {
-    internal class Snake_And_Ladder_Game
+    public class Snake_And_Ladder_Game
     {
+        int player_pos = 0;
     }
 }
+

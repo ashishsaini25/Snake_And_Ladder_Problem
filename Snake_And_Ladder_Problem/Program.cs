@@ -10,7 +10,7 @@ namespace Snake_And_Ladder_Problem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Snake and Ladder Program\n");
+           Snake_And_Ladder_Game player1=new Snake_And_Ladder_Game();
         }
     }
 }
